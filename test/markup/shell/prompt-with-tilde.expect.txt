@@ -1,0 +1,5 @@
+[38;2;31;113;153m~/docs> [39m[38;2;57;115;0mcat[39m[38;2;68;68;68m readme.adoc[39m[38;2;68;68;68m[39m
+[38;2;68;68;68m= Highlight.js[39m
+[38;2;68;68;68m[39m
+[38;2;68;68;68mHighlight.js is a syntax highlighter written in JavaScript.[39m
+[38;2;68;68;68m[39m

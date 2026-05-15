@@ -1,0 +1,9 @@
+<article class="card" data-state="active">
+  <header>
+    <h1>CLI Syntax Preview</h1>
+    <time datetime="2026-05-11">May 11, 2026</time>
+  </header>
+
+  <p>Highlight <code>code</code> snippets in terminal output.</p>
+  <button type="button" aria-pressed="false">Run preview</button>
+</article>

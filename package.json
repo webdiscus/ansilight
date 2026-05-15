@@ -1,0 +1,61 @@
+{
+  "name": "ansilight",
+  "version": "1.0.0",
+  "description": "Node.js library for syntax highlighting in terminals with support for all highlight.js themes",
+  "keywords": [
+    "cli",
+    "syntax",
+    "code",
+    "highlight",
+    "highlight.js",
+    "ansi"
+  ],
+  "license": "ISC",
+  "author": "",
+  "repository": "webdiscus/flaget",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./themes/*": "./themes/*.js"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "node examples/preview.js --width=80 --lang typescript --theme base16-darcula github github-dark atom-one-light atom-one-dark stackoverflow-light stackoverflow-dark",
+    "examples": "node examples/preview.js",
+    "build-theme": "node scripts/build-theme.js",
+    "update-test-expects": "node scripts/update-test-expects.js",
+    "analyze-snippets": "npm run analyze-theme-scopes && npm run analyze-snippets-coverage",
+    "analyze-theme-scopes": "node scripts/analyze-theme-scopes.js",
+    "analyze-snippets-coverage": "node scripts/analyze-snippets-coverage.js",
+    "test": "FORCE_COLOR=3 vitest run",
+    "test:coverage": "FORCE_COLOR=3 vitest run --coverage",
+    "pack:check": "npm pack ./dist --dry-run",
+    "publish:public": "(npm run build) && npm publish ./dist --access public",
+    "publish:beta": "(npm run build) && npm publish ./dist --tag beta"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ansis": "^4.3.0",
+    "highlight.js": "^11.11.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^1.0.0",
+    "@vitest/coverage-v8": "^4.1.6",
+    "ansilight": "file:dist",
+    "css-color-names": "^1.0.1",
+    "flaget": "^2.1.1",
+    "rollup": "^4.60.4",
+    "rollup-plugin-copy": "^3.5.0",
+    "terser": "^5.47.1",
+    "sharp": "^0.34.5",
+    "vitest": "^4.1.6"
+  },
+  "overrides": {
+    "rollup-plugin-copy": {
+      "globby": "^11.0.0"
+    }
+  }
+}

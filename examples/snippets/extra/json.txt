@@ -1,0 +1,11 @@
+{
+  "name": "ansilight",
+  "version": 1,
+  "enabled": true,
+  "theme": null,
+  "languages": ["javascript", "typescript", "json"],
+  "options": {
+    "background": true,
+    "padding": [0, 1]
+  }
+}

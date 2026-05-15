@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+_ignored/
+node_modules/
+coverage/
+coverage.lcov
+dist/
+reports/
+package-lock.json

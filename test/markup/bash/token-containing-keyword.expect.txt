@@ -1,0 +1,11 @@
+[38;2;105;112;112m# a keyword as part of an option[39m[38;2;68;68;68m[39m
+[38;2;68;68;68mmycmd --disable-foo[39m
+[38;2;68;68;68m[39m
+[38;2;68;68;68m[39m[38;2;105;112;112m# a keyword as part of a parameter[39m[38;2;68;68;68m[39m
+[38;2;68;68;68msome-cmd set-some-setting[39m
+[38;2;68;68;68msome-cmd set_some_setting[39m
+[38;2;68;68;68m[39m
+[38;2;68;68;68m[39m[38;2;105;112;112m# a keyword as part of command[39m[38;2;68;68;68m[39m
+[38;2;68;68;68mcheck-case foo[39m
+[38;2;68;68;68mcheck_case foo[39m
+[38;2;68;68;68m[39m

@@ -1,0 +1,25 @@
+{
+  "lang": "typescript",
+  "width": 80,
+  "padding": "1 2",
+  "start": 0,
+  "limit": 1,
+  "header": false,
+  "footer": false,
+  "themes": [],
+  "outputDir": "docs/theme-screenshots",
+  "galleryPath": "docs/theme-gallery.md",
+  "galleryColumns": 2,
+  "crop": "auto",
+  "cropTolerance": 24,
+  "cropPadding": 0,
+  "openWindowDelay": 800,
+  "displayDelay": 150,
+  "closeWindow": true,
+  "window": {
+    "left": 80,
+    "top": 80,
+    "right": 1180,
+    "bottom": 760
+  }
+}

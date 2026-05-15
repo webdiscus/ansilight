@@ -1,0 +1,16 @@
+:root {
+  color-scheme: dark;
+  --accent: #7dd3fc;
+  --surface: #111827;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.preview-grid > article:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}

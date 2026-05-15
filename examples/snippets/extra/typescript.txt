@@ -1,0 +1,17 @@
+type Status = "draft" | "published" | "archived";
+
+interface Article {
+  id: string;
+  title: string;
+  status: Status;
+  tags?: string[];
+}
+
+function publish<T extends Article>(article: T): T & { status: "published" } {
+  return {
+    ...article,
+    status: "published",
+  };
+}
+
+const article = publish({ id: "a1", title: "ANSI themes", status: "draft" });

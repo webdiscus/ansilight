@@ -1,0 +1,4 @@
+[38;2;105;112;112m# numbers aren't highlighted in bash as their semantics is[39m[38;2;68;68;68m[39m
+[38;2;68;68;68m[39m[38;2;105;112;112m# not strictly defined for command line parameters[39m[38;2;68;68;68m[39m
+[38;2;68;68;68m$ [39m[38;2;57;115;0mtail[39m[38;2;68;68;68m -10 access.log[39m
+[38;2;68;68;68m[39m

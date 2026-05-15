@@ -1,0 +1,30 @@
+{
+  "name": "ansilight",
+  "version": "1.0.0",
+  "description": "Terminal syntax highlighting with 200+ truecolor themes",
+  "keywords": [
+    "cli",
+    "syntax",
+    "code",
+    "highlight",
+    "highlight.js",
+    "ansi"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdiscus/ansilight.git"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./themes/*": "./themes/*.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ansis": "^4.3.0",
+    "highlight.js": "^11.11.1"
+  }
+}

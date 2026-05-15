@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Bash",
+    "language": "bash",
+    "file": "snippets/bash.txt"
+  },
+  {
+    "name": "CSS",
+    "language": "css",
+    "file": "snippets/css.txt"
+  },
+  {
+    "name": "Diff",
+    "language": "diff",
+    "file": "snippets/diff.txt"
+  },
+  {
+    "name": "Dockerfile",
+    "language": "dockerfile",
+    "file": "snippets/dockerfile.txt"
+  },
+  {
+    "name": "GraphQL",
+    "language": "graphql",
+    "file": "snippets/graphql.txt"
+  },
+  {
+    "name": "Haml",
+    "language": "haml",
+    "file": "snippets/haml.txt"
+  },
+  {
+    "name": "Handlebars",
+    "language": "handlebars",
+    "file": "snippets/handlebars.txt"
+  },
+  {
+    "name": "Haskell",
+    "language": "haskell",
+    "file": "snippets/haskell.txt"
+  },
+  {
+    "name": "HTTP",
+    "language": "http",
+    "file": "snippets/http.txt"
+  },
+  {
+    "name": "JavaScript",
+    "language": "javascript",
+    "file": "snippets/javascript.txt"
+  },
+  {
+    "name": "JSON",
+    "language": "json",
+    "file": "snippets/json.txt"
+  },
+  {
+    "name": "JSON5",
+    "language": "json5",
+    "file": "snippets/json5.txt"
+  },
+  {
+    "name": "Markdown",
+    "language": "markdown",
+    "file": "snippets/markdown.txt"
+  },
+  {
+    "name": "Nginx",
+    "language": "nginx",
+    "file": "snippets/nginx.txt"
+  },
+  {
+    "name": "PostgreSQL",
+    "language": "pgsql",
+    "file": "snippets/pgsql.txt"
+  },
+  {
+    "name": "SCSS",
+    "language": "scss",
+    "file": "snippets/scss.txt"
+  },
+  {
+    "name": "Shell",
+    "language": "shell",
+    "file": "snippets/shell.txt"
+  },
+  {
+    "name": "SQL",
+    "language": "sql",
+    "file": "snippets/sql.txt"
+  },
+  {
+    "name": "TypeScript",
+    "language": "typescript",
+    "file": "snippets/typescript.txt"
+  },
+  {
+    "name": "XML",
+    "language": "xml",
+    "file": "snippets/xml.txt"
+  },
+  {
+    "name": "Extra CSS",
+    "language": "extra-css",
+    "file": "snippets/extra/css.txt"
+  },
+  {
+    "name": "Extra HTML",
+    "language": "extra-html",
+    "file": "snippets/extra/html.txt"
+  },
+  {
+    "name": "Extra JavaScript",
+    "language": "extra-javascript",
+    "file": "snippets/extra/javascript.txt"
+  },
+  {
+    "name": "Extra JSON",
+    "language": "extra-json",
+    "file": "snippets/extra/json.txt"
+  },
+  {
+    "name": "Extra SQL",
+    "language": "extra-sql",
+    "file": "snippets/extra/sql.txt"
+  },
+  {
+    "name": "Extra TypeScript",
+    "language": "extra-typescript",
+    "file": "snippets/extra/typescript.txt"
+  }
+]

@@ -1,0 +1,15 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 95%
+    patch:
+      default:
+        target: 90%
+
+ignore:
+  - examples/**/*
+  - scripts/**/*
+  - themes/**/*
+  - tools/**/*
+  - test/**/*

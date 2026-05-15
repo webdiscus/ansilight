@@ -1,0 +1,15 @@
+{
+  "themes": [
+    "atom-one-dark",
+    "atom-one-light",
+    "base16-3024",
+    "dark",
+    "default",
+    "github",
+    "github-dark",
+    "idea",
+    "vs",
+    "vs2015",
+    "xcode"
+  ]
+}

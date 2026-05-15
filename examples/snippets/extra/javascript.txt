@@ -1,0 +1,13 @@
+const cache = new Map();
+
+async function loadUser(id, fetchJson) {
+  if (cache.has(id)) return cache.get(id);
+
+  const user = await fetchJson(`/api/users/${id}`);
+  cache.set(id, { ...user, loadedAt: new Date() });
+  return cache.get(id);
+}
+
+loadUser(42, globalThis.fetch)
+  .then((user) => console.log(user.name))
+  .catch(console.error);
