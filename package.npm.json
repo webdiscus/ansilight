@@ -1,6 +1,6 @@
 {
   "name": "ansilight",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Truecolor syntax highlighting in the terminal with 200+ themes",
   "keywords": [
     "terminal",
@@ -16,9 +16,16 @@
     "url": "git+https://github.com/webdiscus/ansilight.git"
   },
   "type": "module",
+  "types": "./index.d.ts",
   "exports": {
-    ".": "./index.js",
-    "./themes/*": "./themes/*.js"
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    },
+    "./themes/*": {
+      "types": "./theme.d.ts",
+      "import": "./themes/*.js"
+    }
   },
   "engines": {
     "node": ">=18"

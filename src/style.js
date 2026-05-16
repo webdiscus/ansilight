@@ -120,6 +120,7 @@ function mergeStyle(computed, style) {
     return;
   }
 
+  // Internal renderer path used by computed styles, not for public API.
   if (typeof style === 'function') {
     computed.render = style;
     return;

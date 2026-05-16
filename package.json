@@ -1,6 +1,6 @@
 {
   "name": "ansilight",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js library for truecolor syntax highlighting in the terminal with all highlight.js themes",
   "keywords": [
     "terminal",
@@ -17,9 +17,16 @@
   "type": "module",
   "main": "./src/index.js",
   "exports": {
-    ".": "./src/index.js",
-    "./themes/*": "./themes/*.js"
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./themes/*": {
+      "types": "./src/theme.d.ts",
+      "import": "./themes/*.js"
+    }
   },
+  "types": "./src/index.d.ts",
   "scripts": {
     "build": "rollup -c",
     "start": "node examples/preview.js --width=80 --lang typescript --theme base16-darcula github github-dark atom-one-light atom-one-dark stackoverflow-light stackoverflow-dark",
@@ -29,7 +36,8 @@
     "analyze-snippets": "npm run analyze-theme-scopes && npm run analyze-snippets-coverage",
     "analyze-theme-scopes": "node scripts/analyze-theme-scopes.js",
     "analyze-snippets-coverage": "node scripts/analyze-snippets-coverage.js",
-    "test": "FORCE_COLOR=3 vitest run",
+    "test": "npm run test:types && FORCE_COLOR=3 vitest run",
+    "test:types": "npm run build && tsc -p test/types/tsconfig.json --noEmit",
     "test:coverage": "FORCE_COLOR=3 vitest run --coverage",
     "pack:check": "npm pack ./dist --dry-run",
     "publish:public": "(npm run build) && npm publish ./dist --access public",
@@ -52,6 +60,7 @@
     "rollup-plugin-copy": "^3.5.0",
     "terser": "^5.47.1",
     "sharp": "^0.34.5",
+    "typescript": "5.4.5",
     "vitest": "^4.1.6"
   },
   "overrides": {

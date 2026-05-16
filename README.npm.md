@@ -1,18 +1,20 @@
 # ansilight
 
-Truecolor syntax highlighting in the terminal with 200+ highlight.js themes.
+Truecolor syntax highlighting in the terminal with 256 `highlight.js` themes.
 
-[![atom-one-dark](docs/theme-screenshots/atom-one-dark.png)](docs/theme-screenshots/atom-one-dark.png)
+All the themes you've seen on the web are now in your terminal, looking exactly the same.
+
+[![atom-one-dark](docs/theme-screenshots/atom-one-dark.png)](docs/theme-screenshots/atom-one-dark.png)\
+_The original **highlight.js** [TypeScript sample](https://highlightjs.org/examples), rendered with **ansilight** in the terminal._
+
 
 ## Features
 
-The key feature is support for all `highlight.js` themes, with visuals very close to the originals.
-
-- Uses `highlight.js` for language highlighting
-- Includes 256 truecolor ANSI themes converted from original `highlight.js` CSS themes
-- Supports compound and nested theme selectors like `variable.constant` and `meta keyword`
-- Supports output blocks with background, padding, and fixed/content width
-- Falls back to 256 and 16 colors
+- Uses `highlight.js` for 200+ languages
+- [256 truecolor themes](themes/) ported from `highlight.js` CSS themes
+- Themes use the `highlight.js` style scopes: compound (`variable.constant`) and nested (`meta keyword`)
+- Styling for code blocks: background, padding, and width
+- Automatic color detection with fallback
 
 ## Install
 
@@ -24,16 +26,22 @@ Requires Node.js 18+. This package is ESM only.
 
 ## Quick Start
 
-Minimal example using the bundled theme.
+Reproduces the screenshot above using the bundled `atom-one-dark` theme.
 
 ```js
 import ansilight from 'ansilight';
 import theme from 'ansilight/themes/atom-one-dark';
 
-const code = 'const value = "Hello World!";';
+const code =
+`class MyClass {
+  public static myValue: string;
+  constructor(init: string) {
+    this.myValue = init;
+  }
+}`;
 
 const output = ansilight(code, {
-  language: 'javascript',
+  language: 'typescript',
   theme,
 });
 

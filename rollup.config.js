@@ -136,6 +136,25 @@ function cleanJson (contents) {
 }
 
 /**
+ * Formats copied TypeScript declaration files for dist.
+ *
+ * The NPM declaration file should keep the public types but not the source
+ * documentation comments.
+ *
+ * @param {Buffer|string} contents TypeScript declaration file contents from rollup-plugin-copy.
+ * @returns {string} TypeScript declarations without comments, with TAB indentation and one trailing newline.
+ */
+function cleanDts (contents) {
+  return contents.toString().
+    replace(/\/\*[\s\S]*?\*\//g, '').
+    replace(/[ \t]+$/gm, '').
+    replace(/^( {4})+/gm, (match) => '\t'.repeat(match.length / 4)).
+    replace(/\n\s*\n/g, '\n').
+    trim().
+    concat('\n');
+}
+
+/**
  * Creates a Rollup plugin that removes stale dist output before each build.
  *
  * This matters because only selected themes are copied to NPM.
@@ -200,6 +219,18 @@ export default {
           dest: 'dist',
           rename: 'package.json',
           transform: cleanJson,
+        },
+        {
+          src: 'src/index.d.ts',
+          dest: 'dist',
+          rename: 'index.d.ts',
+          transform: cleanDts,
+        },
+        {
+          src: 'src/theme.d.ts',
+          dest: 'dist',
+          rename: 'theme.d.ts',
+          transform: cleanDts,
         },
         {
           src: 'README.npm.md',
