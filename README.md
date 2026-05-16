@@ -1,6 +1,6 @@
 # ansilight
 
-Terminal syntax highlighting with 200+ truecolor themes.
+Truecolor syntax highlighting in the terminal with 200+ highlight.js themes.
 
 [![atom-one-dark](docs/theme-screenshots/atom-one-dark.png)](docs/theme-screenshots/atom-one-dark.png)
 
@@ -10,9 +10,9 @@ The key feature is support for all `highlight.js` themes, with visuals very clos
 
 - Uses `highlight.js` for language highlighting
 - Includes 256 truecolor ANSI themes converted from original `highlight.js` CSS themes
-- Preserves compound and nested theme selectors like `variable.constant` and `meta keyword`
-- Falls back to 256 and 16 colors
+- Supports compound and nested theme selectors like `variable.constant` and `meta keyword`
 - Supports output blocks with background, padding, and fixed/content width
+- Falls back to 256 and 16 colors
 
 ## Install
 
@@ -26,7 +26,7 @@ Requires Node.js 18+. This package is ESM only.
 
 ## Quick Start
 
-Minimal example using the bundled `default` theme.
+Minimal example using the bundled theme.
 
 ```js
 import ansilight from 'ansilight';
@@ -37,6 +37,14 @@ const output = ansilight('const value = "Hello World!";', {
 
 console.log(output);
 ```
+
+## Color support
+
+Color detection is handled by [Ansis](https://github.com/webdiscus/ansis).
+
+- [Auto-detection](https://github.com/webdiscus/ansis#color-support) with [fallback](https://github.com/webdiscus/ansis#fallback): Truecolor → 256 → 16 → no color
+- [Environment variables](https://github.com/webdiscus/ansis#cli-vars): `NO_COLOR`, `FORCE_COLOR`, `COLORTERM`
+- [CLI flags](https://github.com/webdiscus/ansis#cli-flags): `--no-color`, `--color`
 
 ## API
 
@@ -51,14 +59,13 @@ Arguments:
 
 ### Options
 
-| Option           | Type                  | Default                                    | Description                                                       |
-|------------------|-----------------------|--------------------------------------------|-------------------------------------------------------------------|
-| `language`       | `string`              | auto-detect                                | `highlight.js` option for language name                           |
-| `ignoreIllegals` | `boolean`             | `true`                                     | `highlight.js` option for illegal syntax handling                 |
-| `theme`          | `object`              | bundled default theme                      | ANSI theme object                                                 |
-| `background`     | `string \| false`     | default theme background                   | Background color as a HEX value, or `false` to disable background |
-| `padding`        | `number \| string`    | `0`, or `"0 1"` when background is enabled | CSS-like padding shorthand                                        |
-| `width`          | `number \| "content"` | `"content"`                                | Visible background width, excluding padding                       |
+| Option       | Type                  | Default                                    | Description                                                                                           |
+|--------------|-----------------------|--------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| `language`   | `string`              | auto-detect                                | [`highlight.js` option](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md) |
+| `theme`      | `object`              | bundled default theme                      | ANSI theme object                                                                                     |
+| `background` | `string \| false`     | theme background                           | Background color as a HEX value, or `false` to disable background                                     |
+| `padding`    | `number \| string`    | `0`, or `"0 1"` when background is enabled | CSS-like padding shorthand                                                                            |
+| `width`      | `number \| "content"` | `"content"`                                | Visible background width, excluding padding                                                           |
 
 
 ## Themes
@@ -158,7 +165,7 @@ console.log(ansilight(code, {
 ### Option `width`
 
 Use `width` to control the visible background width.
-The value is a minimum width: if the highlighted code is wider, the block expands to fit the content.
+If the highlighted code is wider, the block expands to fit the content.
 
 ```js
 import ansilight from 'ansilight';
@@ -188,7 +195,7 @@ console.log(ansilight(code, {
 
 ### Option `padding`
 
-Use `padding` to add space inside the background block. The value uses CSS-like shorthand: one, two, three, or four numbers.
+Use `padding` to add space inside the background block. The value uses CSS-like shorthand.
 
 ```js
 import ansilight from 'ansilight';

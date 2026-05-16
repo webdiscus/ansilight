@@ -1,6 +1,6 @@
 # ansilight
 
-Terminal syntax highlighting with 200+ truecolor themes.
+Truecolor syntax highlighting in the terminal with 200+ highlight.js themes.
 
 [![atom-one-dark](docs/theme-screenshots/atom-one-dark.png)](docs/theme-screenshots/atom-one-dark.png)
 
@@ -10,9 +10,9 @@ The key feature is support for all `highlight.js` themes, with visuals very clos
 
 - Uses `highlight.js` for language highlighting
 - Includes 256 truecolor ANSI themes converted from original `highlight.js` CSS themes
-- Preserves compound and nested theme selectors like `variable.constant` and `meta keyword`
-- Falls back to 256 and 16 colors
+- Supports compound and nested theme selectors like `variable.constant` and `meta keyword`
 - Supports output blocks with background, padding, and fixed/content width
+- Falls back to 256 and 16 colors
 
 ## Install
 
@@ -24,7 +24,7 @@ Requires Node.js 18+. This package is ESM only.
 
 ## Quick Start
 
-Minimal example using the bundled `default` theme.
+Minimal example using the bundled theme.
 
 ```js
 import ansilight from 'ansilight';

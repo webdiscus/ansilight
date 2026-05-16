@@ -1,13 +1,13 @@
 {
   "name": "ansilight",
   "version": "1.0.0",
-  "description": "Terminal syntax highlighting with 200+ truecolor themes",
+  "description": "Truecolor syntax highlighting in the terminal with 200+ themes",
   "keywords": [
+    "terminal",
     "cli",
     "syntax",
     "code",
     "highlight",
-    "highlight.js",
     "ansi"
   ],
   "license": "ISC",
