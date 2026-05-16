@@ -8,13 +8,13 @@ const code =
 };`;
 
 console.log(ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   // use content width
   theme,
 }), '\n');
 
 console.log(ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   width: 40, // set minimum background width
   theme,
 }), '\n');

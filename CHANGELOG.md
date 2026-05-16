@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0 (2026-05-16)
+
+- Renamed option `language` to `lang` in public API. 
+- Deprecated option name `language`, use `lang` instead.
+
 ## 1.0.1 (2026-05-16)
 
 - Added TypeScript declarations for the public API.

@@ -61,7 +61,7 @@ export interface AnsilightOptions {
      *
      * @default auto-detect
      */
-    language?: string;
+    lang?: string;
 
     /**
      * Pass-through to highlight.js. When `true`, illegal syntax in

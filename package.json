@@ -1,6 +1,6 @@
 {
   "name": "ansilight",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Node.js library for truecolor syntax highlighting in the terminal with all highlight.js themes",
   "keywords": [
     "terminal",

@@ -10,12 +10,13 @@ import { normalizeOptions } from './options.js';
 export function ansilight(code, options = {}) {
   const source = String(code);
   const normalizedOptions = normalizeOptions(options);
+  const language = options.lang || options.language;
 
   let result;
 
-  if (options.language && hljs.getLanguage(options.language)) {
+  if (language && hljs.getLanguage(language)) {
     result = hljs.highlight(source, {
-      language: options.language,
+      language,
       ignoreIllegals: options.ignoreIllegals !== false,
     });
   } else {

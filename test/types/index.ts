@@ -21,7 +21,7 @@ const theme: Theme = {
 const options: AnsilightOptions = {
   background: null,
   ignoreIllegals: false,
-  language: 'javascript',
+  lang: 'javascript',
   padding: '0 1',
   theme,
   width: 'content',
@@ -50,4 +50,9 @@ ansilight('const value = 1;', {
 ansilight('const value = 1;', {
   // @ts-expect-error Invalid background option.
   background: true,
+});
+
+ansilight('const value = 1;', {
+  // @ts-expect-error Use public `lang` option instead.
+  language: 'javascript',
 });

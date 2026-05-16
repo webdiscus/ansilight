@@ -1,6 +1,6 @@
 {
   "name": "ansilight",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Truecolor syntax highlighting in the terminal with 200+ themes",
   "keywords": [
     "terminal",

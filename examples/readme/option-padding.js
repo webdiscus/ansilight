@@ -8,19 +8,19 @@ const code =
 };`;
 
 console.log(ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   // default padding
   theme,
 }), '\n');
 
 console.log(ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   padding: 1, // same padding on all sides
   theme,
 }), '\n');
 
 console.log(ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   padding: '1 4', // vertical and horizontal padding
   theme,
 }), '\n');

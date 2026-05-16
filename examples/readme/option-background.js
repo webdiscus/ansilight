@@ -7,19 +7,19 @@ const code =
 }`;
 
 console.log(ansilight(code, {
-  language: 'javascript',
+  lang: 'javascript',
   // use theme background
   theme,
 }), '\n');
 
 console.log(ansilight(code, {
-  language: 'javascript',
+  lang: 'javascript',
   background: '#143757', // override theme background
   theme,
 }), '\n');
 
 console.log(ansilight(code, {
-  language: 'javascript',
+  lang: 'javascript',
   background: false, // disable background
   theme,
 }), '\n');

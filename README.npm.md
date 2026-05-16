@@ -41,7 +41,7 @@ const code =
 }`;
 
 const output = ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   theme,
 });
 

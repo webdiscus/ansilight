@@ -8,7 +8,7 @@ describe('options', () => {
   describe('background', () => {
     test('applies block background by default', () => {
       const result = ansilight('const x = 1;\nx;', {
-        language: 'javascript',
+        lang: 'javascript',
         theme: {
           default: { background: '#ffffff' },
         },
@@ -31,7 +31,7 @@ describe('options', () => {
     test('can disable block background', () => {
       const result = ansilight('const x = 1;\nx;', {
         background: false,
-        language: 'javascript',
+        lang: 'javascript',
         theme: {
           default: { background: '#ffffff' },
         },
@@ -46,7 +46,7 @@ describe('options', () => {
     test('does not render background ANSI codes when background is disabled', () => {
       const result = ansilight('const x = 1;', {
         background: false,
-        language: 'javascript',
+        lang: 'javascript',
         theme: {
           default: { background: '#ffffff' },
         },
@@ -69,7 +69,7 @@ describe('options', () => {
     test('explicit background overrides theme default background', () => {
       const result = ansilight('const x = 1;', {
         background: '#143757',
-        language: 'javascript',
+        lang: 'javascript',
         theme: {
           default: {
             background: '#ffffff',
@@ -208,7 +208,7 @@ describe('options', () => {
 
     test('can override default block background padding', () => {
       const highlightedCode = ansilight('const x = 1;\nx;', {
-        language: 'javascript',
+        lang: 'javascript',
         padding: 0,
         theme: {
           default: { background: '#ffffff' },
@@ -231,6 +231,37 @@ describe('options', () => {
       const expected = { top: 0, right: 1, bottom: 0, left: 1 };
 
       expect(received).toEqual(expected);
+    });
+  });
+
+  describe('lang', () => {
+    test('uses explicit language from lang option', () => {
+      const received = ansilight('SELECT 1;', {
+        background: false,
+        lang: 'sql',
+        padding: 0,
+        width: 'content',
+      });
+      const expected = true;
+
+      expect(received.includes('\u001B[')).toBe(expected);
+    });
+
+    test('keeps language option as silent alias', () => {
+      const received = ansilight('SELECT 1;', {
+        background: false,
+        language: 'sql',
+        padding: 0,
+        width: 'content',
+      });
+      const expected = ansilight('SELECT 1;', {
+        background: false,
+        lang: 'sql',
+        padding: 0,
+        width: 'content',
+      });
+
+      expect(received).toBe(expected);
     });
   });
 });

@@ -18,7 +18,7 @@ describe('markup fixtures', () => {
       const expected = readTextFile(expectedPath);
       const received = ansilight(source, {
         background: false,
-        language,
+        lang: language,
         padding: 0,
         theme: DEFAULT_THEME,
         width: 'content',

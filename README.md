@@ -53,8 +53,8 @@ declare magicNumber number;
 myArray.forEach(() => { }); // fat arrow syntax`;
 
 const output = ansilight(code, {
-  language: 'typescript', // optional, auto-detected if omitted
-  theme,                  // optional, uses 'default' theme if omitted
+  lang: 'typescript', // optional, auto-detected if omitted
+  theme,              // optional, uses 'default' theme if omitted
 });
 
 console.log(output);
@@ -82,13 +82,13 @@ Arguments:
 
 ### Options
 
-| Option       | Type                  | Default                                    | Description                                                                                           |
-|--------------|-----------------------|--------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| `language`   | `string`              | auto-detect                                | [`highlight.js` option](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md) |
-| `theme`      | `object`              | bundled default theme                      | ANSI theme object                                                                                     |
-| `background` | `string \| false`     | theme background                           | Background color as a HEX value, or `false` to disable background                                     |
-| `padding`    | `number \| string`    | `0`, or `"0 1"` when background is enabled | CSS-like padding shorthand                                                                            |
-| `width`      | `number \| "content"` | `"content"`                                | Visible background width, excluding padding                                                           |
+| Option       | Type                  | Default                                    | Description                                                                                                             |
+|--------------|-----------------------|--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| `lang`       | `string`              | auto-detect                                | language name supported by [highlight.js](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md) |
+| `theme`      | `object`              | bundled default theme                      | ANSI theme object                                                                                                       |
+| `background` | `string \| false`     | theme background                           | Background color as a HEX value, or `false` to disable background                                                       |
+| `padding`    | `number \| string`    | `0`, or `"0 1"` when background is enabled | CSS-like padding shorthand                                                                                              |
+| `width`      | `number \| "content"` | `"content"`                                | Visible background width, excluding padding                                                                             |
 
 
 ## Themes
@@ -165,19 +165,19 @@ const code =
 }`;
 
 console.log(ansilight(code, {
-  language: 'javascript',
+  lang: 'javascript',
   // use theme background
   theme,
 }), '\n');
 
 console.log(ansilight(code, {
-  language: 'javascript',
+  lang: 'javascript',
   background: '#143757', // override theme background
   theme,
 }), '\n');
 
 console.log(ansilight(code, {
-  language: 'javascript',
+  lang: 'javascript',
   background: false, // disable background
   theme,
 }), '\n');
@@ -202,13 +202,13 @@ const code =
 };`;
 
 console.log(ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   // use content width
   theme,
 }), '\n');
 
 console.log(ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   width: 40, // set minimum background width
   theme,
 }), '\n');
@@ -232,19 +232,19 @@ const code =
 };`;
 
 console.log(ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   // default padding
   theme,
 }), '\n');
 
 console.log(ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   padding: 1, // same padding on all sides
   theme,
 }), '\n');
 
 console.log(ansilight(code, {
-  language: 'typescript',
+  lang: 'typescript',
   padding: '1 4', // vertical and horizontal padding
   theme,
 }), '\n');

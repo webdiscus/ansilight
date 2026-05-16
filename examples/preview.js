@@ -142,7 +142,7 @@ function renderSnippet(theme, snippet) {
   const source = snippet.code.trimEnd();
   const highlightedCode = ansilight(source, {
     background,
-    language: getHighlightLanguage(snippet.language),
+    lang: getHighlightLanguage(snippet.language),
     padding: flags.padding,
     theme: theme.theme,
     width: normalizeWidth(flags.width),

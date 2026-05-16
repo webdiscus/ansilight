@@ -27,7 +27,7 @@ describe('markup fixtures with generated themes', () => {
         const source = readTextFile(sourcePath);
         const received = ansilight(source, {
           background: false,
-          language,
+          lang: language,
           padding: 0,
           theme,
           width: 'content',
